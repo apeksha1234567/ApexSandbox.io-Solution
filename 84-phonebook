@@ -1,0 +1,16 @@
+public Map<String, String> phonebook(List<Contact> contacts) {
+   Map<String, String> phonebookMap = new Map<String, String>();
+        
+        // Iterate over the list of contacts
+        for (Contact c : contacts) {
+            // Check if the contact has a phone number
+            if (String.isNotEmpty(c.Phone)) {
+                // Add full name as key and phone number as value to the map
+                phonebookMap.put(c.Name, c.Phone);
+            }
+        }
+        
+        return phonebookMap;
+    
+    
+}
