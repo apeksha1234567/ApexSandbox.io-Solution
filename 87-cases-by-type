@@ -1,0 +1,21 @@
+public Map<String, List<Case>> casesByType(List<Case> cases) {
+   // Initialize the map to hold case types as keys and a list of cases as values
+        Map<String, List<Case>> casesByTypeMap = new Map<String, List<Case>>();
+        
+        // Iterate over the list of cases
+        for (Case c : cases) {
+            // Ensure the case has a Type specified
+            if (String.isNotEmpty(c.Type)) {
+                // Check if the map already contains the case type
+                if (!casesByTypeMap.containsKey(c.Type)) {
+                    // If not, initialize an empty list for that type
+                    casesByTypeMap.put(c.Type, new List<Case>());
+                }
+                
+                // Add the current case to the list for its type
+                casesByTypeMap.get(c.Type).add(c);
+            }
+        }
+        
+        return casesByTypeMap;
+}
