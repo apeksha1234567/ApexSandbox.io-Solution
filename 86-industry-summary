@@ -1,0 +1,20 @@
+public Map<String, Decimal> industrySummary(List<Account> accounts) {
+    // Initialize a map to store the sum of annual revenue for each industry
+        Map<String, Decimal> industryRevenueMap = new Map<String, Decimal>();
+        
+        // Iterate over the list of accounts
+        for (Account a : accounts) {
+            // Ensure the account has both Industry and AnnualRevenue populated
+            if (String.isNotEmpty(a.Industry) && a.AnnualRevenue != null) {
+                // If the industry already exists in the map, add the annual revenue to the existing value
+                if (industryRevenueMap.containsKey(a.Industry)) {
+                    industryRevenueMap.put(a.Industry, industryRevenueMap.get(a.Industry) + a.AnnualRevenue);
+                } else {
+                    // If the industry is not yet in the map, add it with the current annual revenue
+                    industryRevenueMap.put(a.Industry, a.AnnualRevenue);
+                }
+            }
+        }
+        
+        return industryRevenueMap;
+    }
