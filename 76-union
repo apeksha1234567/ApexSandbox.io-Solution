@@ -1,0 +1,13 @@
+public Set<Integer> setUnion(Set<Integer> set1, Set<Integer> set2) {
+    // Create a new set to store the union
+        Set<Integer> unionSet = new Set<Integer>();
+        
+        // Add all elements from set1 to the union set
+        unionSet.addAll(set1);
+        
+        // Add all elements from set2 to the union set
+        unionSet.addAll(set2);
+        
+        // Return the union set
+        return unionSet;
+    }
