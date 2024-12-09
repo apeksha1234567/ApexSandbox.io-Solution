@@ -1,0 +1,14 @@
+public Map<String, Account> phoneToAccount(List<Account> accounts) {
+    Map<String, Account> phoneToAccountMap = new Map<String, Account>();
+        
+        // Iterate over the list of accounts
+        for (Account a : accounts) {
+            // Check if the account has a phone number
+            if (String.isNotEmpty(a.Phone)) {
+                // Add phone number as key and Account record as value to the map
+                phoneToAccountMap.put(a.Phone, a);
+            }
+        }
+        
+        return phoneToAccountMap;
+    }
