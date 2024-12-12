@@ -1,0 +1,24 @@
+public List<String> getNamesInAscOrder(List<String> accountNames)
+{
+    List<String> sortedNames = new List<String>(fullNames);
+        
+        // Sort the list in ascending order
+        sortedNames.sort();
+        
+        // Return the sorted list
+        return sortedNames;
+    }
+
+    // Test method to verify the getNamesInAscOrder function
+    public static void testGetNamesInAscOrder() {
+        // Create a list of full names
+        List<String> fullNames = new List<String>{'Blake Howard', 'Adrienne Copeland'};
+        
+        // Get the sorted list of names
+        List<String> result = getNamesInAscOrder(fullNames);
+        
+        // Output the results to verify the sorting
+        System.debug('First name: ' + result[0]); // Expected: Adrienne Copeland
+        System.debug('Second name: ' + result[1]); // Expected: Blake Howard
+        System.debug('List size: ' + result.size()); // Expected: 2
+    
