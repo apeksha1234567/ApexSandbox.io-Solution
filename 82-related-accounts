@@ -1,0 +1,30 @@
+public Set<Id> accountIds(List<Opportunity> opps) {
+     Set<Id> accountIdSet = new Set<Id>();
+        
+        // Loop through the list of Opportunities and add AccountId to the Set
+        for (Opportunity opp : opps) {
+            if (opp.AccountId != null) {
+                accountIdSet.add(opp.AccountId);
+            }
+        }
+        
+        // Return the set of Account IDs
+        return accountIdSet;
+    }
+
+    // Test method to verify the accountIds function
+    public static void testAccountIds() {
+        // Create sample Opportunity records
+        Opportunity opp1 = new Opportunity(Name = 'Opportunity 1', AccountId = '0015f00000CtulqAAB');
+        Opportunity opp2 = new Opportunity(Name = 'Opportunity 2', AccountId = '0015f00000CtulqAAB');
+        
+        // Create a list of Opportunities
+        List<Opportunity> opps = new List<Opportunity> {opp1, opp2};
+        
+        // Call the accountIds method to get the unique Account IDs
+        Set<Id> accountIdsSet = accountIds(opps);
+        
+        // Output the result to the debug log
+        System.debug('Account IDs: ' + accountIdsSet); // Expected output: {0015f00000CtulqAAB}
+    
+}
