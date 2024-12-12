@@ -19,5 +19,5 @@ public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
         
         // Output the result
         System.debug('Intersection of set1 and set2: ' + set3); // Expected output: {2, 3}
-    }
+    
 }
