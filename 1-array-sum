@@ -1,0 +1,24 @@
+public static Integer arraySum(List<Integer> numbers) {
+     Integer sum = 0;
+        
+        // Loop through each number in the list and add it to the sum
+        for (Integer num : numbers) {
+            sum += num;
+        }
+        
+        // Return the computed sum
+        return sum;
+    }
+
+    // Test method to verify the arraySum function
+    public static void testArraySum() {
+        // Create a list of numbers
+        List<Integer> numbers = new List<Integer>{5, 2, 3};
+        
+        // Get the sum of numbers in the list
+        Integer result = arraySum(numbers);
+        
+        // Output the result to verify the sum
+        System.debug('Sum of numbers: ' + result); // Expected output: 10
+    
+}
