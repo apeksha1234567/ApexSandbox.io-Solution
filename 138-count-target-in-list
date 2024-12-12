@@ -1,5 +1,6 @@
 public Integer findTargetCount(List<Integer> nums, Integer target) {
-    Integer count = 0;
+    // Initialize a counter to track the number of occurrences
+        Integer count = 0;
         
         // Loop through the list and count occurrences of target
         for (Integer num : nums) {
@@ -12,18 +13,25 @@ public Integer findTargetCount(List<Integer> nums, Integer target) {
         return count;
     }
 
-    // Test method to verify the countTargetOccurrences function
-    public static void testCountTargetOccurrences() {
+    // Test method to verify the findTargetCount function
+    public static void testFindTargetCount() {
         // Create a list of integers
-        List<Integer> nums = new List<Integer>{1, 2, 3, 2, 2, 4, 5};
+        List<Integer> nums = new List<Integer>{5, 2, 8, -4, 8, 1, 11};
         
-        // Define the target value
-        Integer target = 2;
+        // Test case 1: Find count of target 12 (should return 0)
+        Integer result1 = findTargetCount(nums, 12);
+        System.debug('Count of target 12: ' + result1); // Expected output: 0
         
-        // Get the count of target occurrences in the list
-        Integer result = countTargetOccurrences(nums, target);
+        // Test case 2: Find count of target 8 (should return 2)
+        Integer result2 = findTargetCount(nums, 8);
+        System.debug('Count of target 8: ' + result2); // Expected output: 2
         
-        // Output the result to verify the count
-        System.debug('Count of target ' + target + ': ' + result); // Expected output: 3
-    
+        // Test case 3: Find count of target 11 (should return 1)
+        Integer result3 = findTargetCount(nums, 11);
+        System.debug('Count of target 11: ' + result3); // Expected output: 1
+        
+        // Test case 4: Find count of target -4 (should return 1)
+        Integer result4 = findTargetCount(nums, -4);
+        System.debug('Count of target -4: ' + result4); // Expected output: 1
+    }
 }
