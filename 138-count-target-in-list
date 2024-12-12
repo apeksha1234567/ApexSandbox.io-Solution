@@ -25,5 +25,5 @@ public Integer findTargetCount(List<Integer> nums, Integer target) {
         
         // Output the result to verify the count
         System.debug('Count of target ' + target + ': ' + result); // Expected output: 3
-    }
+    
 }
