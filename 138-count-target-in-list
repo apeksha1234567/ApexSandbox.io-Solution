@@ -1,0 +1,29 @@
+public Integer findTargetCount(List<Integer> nums, Integer target) {
+    Integer count = 0;
+        
+        // Loop through the list and count occurrences of target
+        for (Integer num : nums) {
+            if (num == target) {
+                count++;
+            }
+        }
+        
+        // Return the final count
+        return count;
+    }
+
+    // Test method to verify the countTargetOccurrences function
+    public static void testCountTargetOccurrences() {
+        // Create a list of integers
+        List<Integer> nums = new List<Integer>{1, 2, 3, 2, 2, 4, 5};
+        
+        // Define the target value
+        Integer target = 2;
+        
+        // Get the count of target occurrences in the list
+        Integer result = countTargetOccurrences(nums, target);
+        
+        // Output the result to verify the count
+        System.debug('Count of target ' + target + ': ' + result); // Expected output: 3
+    
+}
