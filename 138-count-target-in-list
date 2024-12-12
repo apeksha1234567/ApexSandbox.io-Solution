@@ -33,5 +33,5 @@ public Integer findTargetCount(List<Integer> nums, Integer target) {
         // Test case 4: Find count of target -4 (should return 1)
         Integer result4 = findTargetCount(nums, -4);
         System.debug('Count of target -4: ' + result4); // Expected output: 1
-    }
+    
 }
