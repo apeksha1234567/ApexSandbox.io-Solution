@@ -13,5 +13,5 @@ public Boolean isLeapYear(Integer year) {
             return true;  // It's a leap year if divisible by 4 but not 100
         }
         return false; // Not a leap year if not divisible by 4
-    
+}
 }
