@@ -1,0 +1,8 @@
+public String evenOrOdd(Integer num) {
+    // Use Math.mod to check if the number is even or odd
+        if (Math.mod(number, 2) == 0) {
+            return 'even';  // The number is even
+        } else {
+            return 'odd';   // The number is odd
+        }
+}
