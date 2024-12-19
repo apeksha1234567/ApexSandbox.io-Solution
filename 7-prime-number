@@ -12,5 +12,5 @@ public Boolean isPrime(Integer num) {
         }
         
         return true; // Number is prime
-    }
+    
 }
