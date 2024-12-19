@@ -1,0 +1,20 @@
+public String formatName(String firstName, String lastName) {
+     // If both names are null or empty, return an empty string
+        if (String.isEmpty(firstName) && String.isEmpty(lastName)) {
+            return '';
+        }
+        
+        // If firstName is empty, return only lastName
+        if (String.isEmpty(firstName)) {
+            return lastName;
+        }
+        
+        // If lastName is empty, return only firstName
+        if (String.isEmpty(lastName)) {
+            return firstName;
+        }
+        
+        // If neither name is empty, return in the format "LastName, FirstName"
+        return lastName + ', ' + firstName;
+    }
+}
