@@ -8,5 +8,5 @@ public String evenOrOdd(Integer num) {
         } else {
             return 'odd';
         }
-    }
+    
 }
