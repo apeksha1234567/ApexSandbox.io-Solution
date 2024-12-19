@@ -16,5 +16,5 @@ public String formatName(String firstName, String lastName) {
         
         // If neither name is empty, return in the format "LastName, FirstName"
         return lastName + ', ' + firstName;
-    }
+    
 }
