@@ -9,5 +9,5 @@ public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean p
         
         // Return true if at least two conditions are true
         return trueCount >= 2;
-    }
+    
 }
