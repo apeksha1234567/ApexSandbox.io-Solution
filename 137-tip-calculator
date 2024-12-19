@@ -6,6 +6,6 @@ public Decimal computeTip(Decimal total, Integer percent) {
         Decimal tip = totalBill * decimalPercentage / 100;
         
         return tip;
-    }
+    
     
 }
