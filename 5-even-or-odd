@@ -1,8 +1,12 @@
 public String evenOrOdd(Integer num) {
-    // Use Math.mod to check if the number is even or odd
-        if (Math.mod(number, 2) == 0) {
-            return 'even';  // The number is even
+    // Compute the remainder after dividing by 2 using Math.mod
+        Integer remainder = Math.mod(number, 2);
+        
+        // If the remainder is 0, it's even; otherwise, it's odd
+        if (remainder == 0) {
+            return 'even';
         } else {
-            return 'odd';   // The number is odd
+            return 'odd';
         }
+    }
 }
