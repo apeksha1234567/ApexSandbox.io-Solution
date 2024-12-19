@@ -20,5 +20,5 @@ public String changeTimeFormat(String strTime) {
         String formattedTime = String.format('{0}:{1} {2}', new List<String>{String.format('{0, number, 00}', new List<Object>{hour}), minute, period});
         
         return formattedTime;
-    }
+    
 }
