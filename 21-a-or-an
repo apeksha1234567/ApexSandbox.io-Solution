@@ -1,16 +1,16 @@
 public String aOrAn(String word) {
-    / Check if the word is null or empty
+    // Check if the word is null or empty
         if (String.isEmpty(word)) {
-            return null;
+            return '';
         }
         
-        // Convert the first character to lowercase for case-insensitive comparison
-        Char firstChar = word.toLowerCase().charAt(0);
+        // Convert the word to lowercase to handle case insensitivity
+        word = word.toLowerCase();
         
-        // Check if the first character is a vowel (a, e, i, o, u)
-        if ('aeiou'.indexOf(firstChar) != -1) {
-            return 'an ' + word; // If it's a vowel, prepend "an"
+        // Check if the word starts with a vowel using startsWith method
+        if (word.startsWith('a') || word.startsWith('e') || word.startsWith('i') || word.startsWith('o') || word.startsWith('u')) {
+            return 'an ' + word;
         } else {
-            return 'a ' + word; // Otherwise, prepend "a"
+            return 'a ' + word;
         }
 }
