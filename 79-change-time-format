@@ -1,0 +1,24 @@
+public String changeTimeFormat(String strTime) {
+    // Split the time into hour and minute
+        String[] timeParts = strTime.split(':');
+        Integer hour = Integer.valueOf(timeParts[0]);
+        String minute = timeParts[1];
+        
+        String period = 'AM'; // Default period is AM
+        
+        // Convert the hour to 12-hour format and determine AM/PM
+        if (hour == 0) {
+            hour = 12; // Midnight case
+        } else if (hour == 12) {
+            period = 'PM'; // Noon case
+        } else if (hour > 12) {
+            hour = hour - 12; // PM case
+            period = 'PM';
+        }
+        
+        // Format the hour to two digits and return the result in the 12-hour format
+        String formattedTime = String.format('{0}:{1} {2}', new List<String>{String.format('{0, number, 00}', new List<Object>{hour}), minute, period});
+        
+        return formattedTime;
+    }
+}
