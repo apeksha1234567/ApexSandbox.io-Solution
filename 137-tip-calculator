@@ -1,12 +1,11 @@
 public Decimal computeTip(Decimal total, Integer percent) {
-     // Validate the percentage to ensure it's between 0 and 100
-        if (percentage < 0 || percentage > 100) {
-            throw new IllegalArgumentException('Percentage must be between 0 and 100.');
-        }
+     // Convert percentage to Decimal to ensure correct division (to avoid truncation)
+        Decimal decimalPercentage = Decimal.valueOf(percentage);
         
-        // Compute the tip by multiplying the total bill by the percentage (divided by 100)
-        Decimal tip = totalBill * percentage / 100;
+        // Calculate the tip by multiplying the total bill by the percentage (as a Decimal) and dividing by 100
+        Decimal tip = totalBill * decimalPercentage / 100;
         
         return tip;
+    }
     
 }
