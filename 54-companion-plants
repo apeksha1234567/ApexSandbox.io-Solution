@@ -1,0 +1,21 @@
+public Boolean companionPlants(String plant1, String plant2) {
+    // Define valid companion plant pairs
+        Set<Set<String>> companions = new Set<Set<String>>{
+            new Set<String>{'lettuce', 'cucumbers'},
+            new Set<String>{'lettuce', 'onions'},
+            new Set<String>{'onions', 'carrots'},
+            new Set<String>{'onions', 'tomatoes'}
+        };
+        
+        // Check if the pair exists in the set of companions
+        Set<String> plantPair = new Set<String>{plant1, plant2};
+        
+        for (Set<String> companionPair : companions) {
+            if (plantPair == companionPair) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+}
