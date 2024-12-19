@@ -1,0 +1,4 @@
+public Integer sumToN(Integer n) {
+    // Using the formula for the sum of the first n numbers
+        return n * (n + 1) / 2;
+}
