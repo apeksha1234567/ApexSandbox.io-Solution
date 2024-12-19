@@ -1,0 +1,12 @@
+public String nameFromEmail(String email) {
+      // Split the email by the period to extract first name and last name
+        String[] nameParts = email.split('@')[0].split('\\.');
+        
+        // Capitalize the first name and last name
+        String firstName = nameParts[0].capitalize();
+        String lastName = nameParts[1].capitalize();
+        
+        // Return the full name as "FirstName LastName"
+        return firstName + ' ' + lastName;
+    
+}
