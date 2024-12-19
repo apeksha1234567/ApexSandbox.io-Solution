@@ -1,3 +1,5 @@
 public Boolean isEndWithZero(Integer num){
-    return number % 10 == 0;
+    // Check if the number ends with 0 using Math.mod() function
+        return Math.mod(number, 10) == 0;
+
 }
